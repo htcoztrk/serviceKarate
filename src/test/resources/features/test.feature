@@ -8,7 +8,8 @@ Feature: test
     Given path 'posts/1'
     When method GET
     Then status 200
-    * karate.delay(1800000)  # 30 dakika = 1_800_000 ms
+    * def Thread = Java.type('java.lang.Thread')
+    * Thread.sleep(1800 * 1000)
     And match response.id == 1
     And match response.userId == 1
 

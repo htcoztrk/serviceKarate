@@ -8,6 +8,7 @@ Feature: test
     Given path 'posts/1'
     When method GET
     Then status 200
+    * karate.sleep(1800000)
     And match response.id == 1
     And match response.userId == 1
 

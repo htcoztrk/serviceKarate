@@ -8,7 +8,7 @@ Feature: test
     Given path 'posts/1'
     When method GET
     Then status 200
-    * karate.sleep(1800000)
+    * karate.delay(1800000)  # 30 dakika = 1_800_000 ms
     And match response.id == 1
     And match response.userId == 1
 
